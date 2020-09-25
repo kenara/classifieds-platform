@@ -28,7 +28,7 @@ https://video-webchat-backend.herokuapp.com/
 
 Clone this repo
 
-    git clone https://github.com/Kiruxg/Video-Chat-App-with-NodeJS.git
+    git clone https://github.com/Kiruxg/classifieds-platform.git
 
 Install all dependencies
 
