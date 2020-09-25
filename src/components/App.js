@@ -1,4 +1,5 @@
 import React, { Component, createContext } from "react"
+import ReactDOM from "react-dom"
 import { BrowserRouter as Router, Route, Link, Redirect, withRouter, Switch } from "react-router-dom"
 import "../sass/main.scss"
 import Header from "./Header.js"
@@ -7,12 +8,14 @@ import Homepage2 from "./Homepage2.js"
 import Listings from "./Listings.js"
 import Item from "./Item.js"
 import Newpost1 from "./Newpost1.js"
+import initFirebase from "./initFirebase.js"
 import Errorpage from "./My404Component.js"
 //import Auth from './signIn.js'
 import ManagePosts from "./ManagePosts.js"
 import firebase from "firebase/app"
 import toastr from "toastr"
 import StateContext from "./StateProvider"
+import signIn from "./signIn"
 export default class App extends Component {
   constructor() {
     super()
