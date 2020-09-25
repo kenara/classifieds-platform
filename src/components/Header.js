@@ -301,9 +301,9 @@ export default class Header extends Component {
               </div>
               <span className="username">{this.state.currentUserName}</span> */}
               <div className="userimg">
-                <img src={JSON.parse(localStorage.getItem("classifiedsToken")).photoURL} alt=""></img>
+                <img src={JSON.parse(localStorage.getItem("classifiedsToken"))?.photoURL} alt=""></img>
               </div>
-              <span className="username">{JSON.parse(localStorage.getItem("classifiedsToken")).displayName}</span>
+              <span className="username">{JSON.parse(localStorage.getItem("classifiedsToken"))?.displayName}</span>
             </div>
           </section>
           <div className="navigation">
