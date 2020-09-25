@@ -15,14 +15,7 @@ Web application built to serve as a resource for UC students to share event reso
 
 ## Demo
 
-https://video-webchat-backend.herokuapp.com/
-
-## Developed using
-
-- Node.js
-- Express.js
-- Socket.IO
-- PeerJs
+https://classifieds-platform.herokuapp.com/
 
 ## How to install
 
