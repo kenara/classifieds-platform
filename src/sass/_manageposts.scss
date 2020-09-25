@@ -1,0 +1,224 @@
+.managePost {
+  background-color: $color-offwhite;
+  width: 90%;
+  margin: 140px auto;
+  margin-bottom: 100px;
+  border-radius: 4px;
+
+  @media only screen and (max-width: 1200px) {
+    width: 100%;
+  }
+  .list-view {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    > div {
+      max-width: 360px;
+      height: 250px;
+      margin: 20px auto;
+    }
+  }
+  .manageUser {
+    text-align: center;
+    margin: 0 auto;
+    .userImg {
+      img,
+      .img-loader {
+        border-radius: 50%;
+        border: 4px solid white;
+        width: 220px;
+      }
+    }
+    .username {
+      font-size: 40px;
+      font-weight: 600;
+      margin-top: 20px;
+    }
+  }
+  .changePosts {
+    margin: 0px auto;
+    margin-top: 90px;
+    padding: 10px 20px;
+    h4 {
+      font-size: 40px;
+      font-weight: 600;
+      margin-bottom: 50px;
+      @media only screen and (max-width: 1200px) {
+        font-size: 28px;
+        text-align: center;
+      }
+    }
+    .noresult {
+      padding: 20px;
+      margin: 20px auto;
+      text-align: center;
+      color: darkgray;
+      font-weight: 600;
+      font-size: 30px;
+    }
+  }
+  .viewPost {
+    position: relative;
+    max-width: 360px;
+    margin: 20px;
+    .MuiCard-root {
+      width: 350px;
+      margin: 0px auto;
+    }
+    .box {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    }
+    .item {
+      border-radius: 5px;
+      width: 360px;
+      overflow: hidden;
+      cursor: pointer;
+      .image {
+        background: url("https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&h=350");
+        height: 250px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        .price {
+          position: absolute;
+          margin: 10px;
+          color: darkgreen;
+          padding: 5px;
+          font-weight: 600;
+          font-size: 1.2rem;
+          border-radius: 3px;
+          right: 0;
+          bottom: 0;
+          z-index: 1000;
+        }
+        .item-desc {
+          background-color: #eff0f2;
+          width: 100%;
+          padding: 15px;
+          position: absolute;
+          bottom: 0;
+          color: black;
+          h4 {
+            font-weight: 600;
+            padding: 4px 0;
+            text-transform: capitalize;
+          }
+          h6 {
+            font-weight: 400;
+            font-size: 0.8rem;
+            padding: 4px 0;
+            text-transform: capitalize;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+    .editdelete {
+      position: absolute;
+      top: 15%;
+      right: -15px;
+      float: right;
+      > * {
+        background: #eff0f2;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+      }
+      a {
+        color: #2c7dd3;
+        display: block;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .fas,
+      .far {
+        cursor: pointer;
+        padding: 12px 5px;
+        font-size: 22px;
+      }
+
+      .fa-trash-alt {
+        color: #e51616;
+      }
+    }
+  }
+  .popup__content {
+    padding-bottom: 1rem;
+    width: 30%;
+
+    text-align: center;
+
+    @media only screen and (max-width: 800px) {
+      width: 90%;
+    }
+    h3 {
+      font-size: 24px;
+      line-height: 0.4;
+    }
+    .mainwrapper {
+      overflow-y: scroll;
+      height: 400px;
+    }
+    section {
+      margin: 10px auto;
+    }
+    label {
+      font-size: 15px;
+      margin-top: 10px;
+      margin-left: 0;
+    }
+    .stylefile {
+      margin: 0 auto;
+    }
+
+    #editdesc {
+      width: 45%;
+    }
+    .pt-input,
+    input {
+      resize: none;
+      font-size: 13.5px;
+      text-align: left;
+    }
+    .update {
+      background-color: #2c7dd3;
+      color: #fff;
+      font-weight: bold;
+      float: right;
+      width: 150px;
+      margin: 40px 0;
+      margin-right: 50px;
+      font-size: 16px;
+      cursor: pointer;
+      text-align: center;
+    }
+    textarea {
+      padding: 20px;
+      border: none;
+      outline: none;
+    }
+    .pricing {
+      //position: relative;
+      //            #editdollasign {
+      //                //position: absolute;
+      //                top: 11px;
+      //                left: 369px;
+      //                font-weight: 600;
+      //                font-size: 20px;
+      //            }
+    }
+    .blackbox {
+      height: auto;
+      padding: 10px;
+      margin-top: 0;
+      display: flex;
+      progress {
+        margin: 10px auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+.home {
+  & h3 {
+    font-size: 40px;
+    color: $color-darkblue;
+    padding: 10px 15px;
+    margin: 10px;
+    text-align: center;
+    font-weight: 500;
+
+    @include respond(tab-land) {
+      font-size: 45px;
+    }
+    @include respond(tab-port) {
+    }
+    @include respond(phone) {
+      font-size: 35px;
+    }
+  }
+}
+.mainpage {
+  width: 80%;
+  margin: 40px auto;
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  grid-gap: 60px;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  .gridwrapper {
+    margin: 0 auto;
+  }
+  h5 {
+    font-size: 32px;
+    font-weight: 600;
+    color: $color-darkblue;
+    text-align: left;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-bottom: 3px solid currentColor;
+
+    @include respond(phone) {
+      font-size: 25px;
+    }
+  }
+  .schoollist {
+    text-align: left;
+    padding: 10px 0;
+    width: 100%;
+    .button {
+      padding: 10px;
+      color: black;
+      font-weight: 600;
+      text-decoration: none;
+      p {
+        background-color: $color-darkblue;
+        font-size: 1.8rem;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+        width: 240px;
+        height: auto;
+        font-weight: 300;
+        transition: all 0.3s;
+
+        @include respond(phone) {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .mainpage {
+    width: 100%;
+    h3 {
+      font-size: 34px;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .mainpage {
+    width: 100%;
+    h3 {
+      font-size: 1.5rem;
+    }
+    .schoollist {
+      width: 60%;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .mainpage {
+    h3 {
+      font-size: 1.2rem;
+    }
+    .schoollist {
+      width: 60%;
+    }
+  }
+}
