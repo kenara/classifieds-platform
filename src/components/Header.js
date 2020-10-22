@@ -238,12 +238,9 @@ export default class Header extends Component {
   }
 
   componentDidMount() {
-    this.setState(
-      {
-        user: this.context.user
-      },
-      () => console.log("got the user", this.state.user)
-    )
+    this.setState({
+      user: this.context.user
+    })
   }
   toggleNav = () => {
     this.checkboxRef.current.checked = false

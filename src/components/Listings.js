@@ -235,14 +235,13 @@ export default class Listings extends Component {
   //      $('.filter').toggleClass('filter-active');
   //      $('.wrapper').toggleClass('wrapper-active');
   //   }
-
+ 
   componentDidMount() {
     const { match, history, location } = this.props
     if (match.params.category === "Resources" || match.params.category === "Events" || match.params.listings === "Roommates") {
       this.formRef.current.style.display = "none"
     }
-  }
-  componentDidMount() {
+
     var ref = firebase.database().ref("users")
     var self = this
     ref.on("value", function (data) {
@@ -342,7 +341,6 @@ export default class Listings extends Component {
                 ) : (
                   <FadeIn>{this.handleView()}</FadeIn>
                 )} */}
-                {console.log("wut", this.state.loading)}
                 {this.state.loading ? <LoadingDotsIcon /> : <FadeIn>{this.handleView()}</FadeIn>}
               </section>
             </Card>

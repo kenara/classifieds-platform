@@ -1,6 +1,6 @@
 import React, { Component, createContext } from "react"
 import ReactDOM from "react-dom"
-import { BrowserRouter as Router, Route, Link, Redirect, withRouter, Switch } from "react-router-dom"
+import { BrowserRouter as Router, Route, Link, Redirect, withRouter, Switch, HashRouter } from "react-router-dom"
 import "../sass/main.scss"
 import Header from "./Header.js"
 import Homepage1 from "./Homepage1.js"
@@ -84,7 +84,7 @@ export default class App extends Component {
       />
     )
     return (
-      <Router>
+      <HashRouter>
         <div>
           <Switch>
             <AuthRoute exact path="/Newpost1" component={Newpost1} />
@@ -97,7 +97,7 @@ export default class App extends Component {
             <Errorpage authenticated={this.context.user} />
           </Switch>
         </div>
-      </Router>
+      </HashRouter>
     )
   }
 }
