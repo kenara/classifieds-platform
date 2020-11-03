@@ -9,10 +9,12 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.20.0",
+    "connect-history-api-fallback": "^1.6.0",
     "cors": "^2.8.5",
     "firebase": "^7.21.0",
     "jquery": "^3.5.1",
     "node-sass": "^4.14.1",
+    "nodemon": "^2.0.6",
     "react": "^16.13.1",
     "react-content-loader": "^5.1.1",
     "react-dom": "^16.13.1",
@@ -23,7 +25,7 @@
     "toastr": "^2.1.4"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

@@ -84,7 +84,7 @@ export default class App extends Component {
       />
     )
     return (
-      <HashRouter>
+      <Router>
         <div>
           <Switch>
             <AuthRoute exact path="/Newpost1" component={Newpost1} />
@@ -97,7 +97,7 @@ export default class App extends Component {
             <Errorpage authenticated={this.context.user} />
           </Switch>
         </div>
-      </HashRouter>
+      </Router>
     )
   }
 }

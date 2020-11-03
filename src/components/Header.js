@@ -1,6 +1,6 @@
 import React, { Component, createRef } from "react"
 import ReactDOM from "react-dom"
-import { BrowserRouter as Router, Route, NavLink, Link } from "react-router-dom"
+import { BrowserRouter as Router, Route, NavLink, Link} from "react-router-dom"
 import Newpost1 from "./Newpost1.js"
 import ManagePosts from "./ManagePosts.js"
 import firebase from "firebase/app"
@@ -258,13 +258,6 @@ export default class Header extends Component {
                   <h4>Golden Catalog</h4>
                 </div>
               </Link>
-              {/* <Link to={!this.context.user ? "#login" : "/Newpost1"} onClick={() => this.setState({ popupTrue: true })}>
-                <Button variant="outlined" size="medium">
-                  <div className="post">
-                    <p>Post To Classifieds</p>
-                  </div>
-                </Button>
-              </Link> */}
               {!this.context.user ? (
                 <a href="#login">
                   <Button variant="outlined" size="medium">
@@ -282,21 +275,10 @@ export default class Header extends Component {
                   </Button>
                 </Link>
               )}
-              {/* <Link to={this.context.user ? "/Newpost1" : "#login"}>
-                <Button variant="outlined" size="medium">
-                  <div className="post">
-                    <p>Post To Classifieds</p>
-                  </div>
-                </Button>
-              </Link> */}
             </div>
           </section>
           <section className="rightmenu">
             <div className="user">
-              {/* <div className="userimg">
-                <img src={this.state.currentUserPhoto}></img>
-              </div>
-              <span className="username">{this.state.currentUserName}</span> */}
               <div className="userimg">
                 <img src={JSON.parse(localStorage.getItem("classifiedsToken"))?.photoURL} alt=""></img>
               </div>
@@ -346,7 +328,6 @@ export default class Header extends Component {
           </div>
         </header>
         <div className="popup" id="login">
-          {/* {this.state.popupTrue && ( */}
           <FadeIn>
             <div className="popup__content">
               <a onClick={() => this.setState({ popupTrue: false })} href="#EditCancel" className="popup__close">

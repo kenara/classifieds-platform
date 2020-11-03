@@ -7,12 +7,31 @@ import { Card } from "@material-ui/core"
 export default class Item extends Component {
   constructor() {
     super()
-    this.state = {}
+    this.state = {
+      routeState: null
+    }
+  }
+  componentDidMount(){
+    if (this.props.location.state) {
+      localStorage.setItem("routeState", JSON.stringify(this.props.location.state))
+      // this.setState({
+      //   routeState: this.props.location.state
+
+      // })
+    } else {
+      // this.setState({
+      //   routeState: JSON.parse(localStorage.getItem("routeState"))
+
+      // })
+    }
   }
 
   render() {
+   
+
     const { match, location, history } = this.props
-    const { category, description, date, img, listing, name, note, phone, price, school, title } = location.state.item
+    const { category, description, date, img, listing, name, note, phone, price, school, title } = location.state ? location.state.item : JSON.parse(localStorage.getItem("routeState")).item
+
     return (
       <div className="itempage">
         <Card>
@@ -44,7 +63,7 @@ export default class Item extends Component {
                   <p>Posted {date}</p>
                   <h2>{title}</h2>
                   <h3 className="pricelist">
-                    {location.state.priceIcon}
+                    {(match.params.category === "Resources" || match.params.category === "Events") ? "" : "$"}
                     {price}
                   </h3>
                 </div>

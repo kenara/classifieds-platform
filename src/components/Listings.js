@@ -121,7 +121,7 @@ export default class Listings extends Component {
   handleChange = event => {
     //event.target is a reference to object that dispatched the event
     const name = event.target.name
-    const value = event.target.type == "checkbox" ? event.target.checked : event.target.value
+    const value = event.target.type === "checkbox" ? event.target.checked : event.target.value
     this.setState(
       {
         [name]: value
