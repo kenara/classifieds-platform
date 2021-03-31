@@ -44,7 +44,7 @@ export default class ManagePosts extends Component {
       var currentUser = firebase.auth().currentUser
       this.getUserData()
 
-      var ref = firebase.database().ref("users/" + currentUser.uid + "/Posts")
+      var ref = firebase.database().ref("people/" + currentUser.uid + "/posts")
       var self = this
       ref.on("value", function (data) {
         var userData = data.val()
@@ -53,7 +53,7 @@ export default class ManagePosts extends Component {
         }
         var refArray = []
         for (var key in keys) {
-          refArray.push(firebase.database().ref("users/" + currentUser.uid + "/Posts/" + key))
+          refArray.push(firebase.database().ref("people/" + currentUser.uid + "/posts/" + key))
         }
         var postArray = []
 
@@ -137,7 +137,7 @@ export default class ManagePosts extends Component {
       console.log("my price", price)
       console.log(self.state)
       console.log("my references", self.state.refArray[index])
-      var editRef = firebase.database().ref("users/" + firebase.auth().currentUser.uid + "/Posts/" + self.state.refKeys[index])
+      var editRef = firebase.database().ref("people/" + firebase.auth().currentUser.uid + "/posts/" + self.state.refKeys[index])
       //editRef.remove()
       editRef.update({
         dateUnix: self.state.postArray[index].dateUnix,
@@ -159,7 +159,7 @@ export default class ManagePosts extends Component {
   }
   deletePost = index => {
     var currentUser = firebase.auth().currentUser
-    var ref = firebase.database().ref("users/" + currentUser.uid + "/Posts")
+    var ref = firebase.database().ref("people/" + currentUser.uid + "/posts")
     var self = this
     ref.once("value", function (data) {
       var userData = data.val()
@@ -168,7 +168,7 @@ export default class ManagePosts extends Component {
       }
       firebase
         .database()
-        .ref("users/" + currentUser.uid + "/Posts/" + keys[index])
+        .ref("people/" + currentUser.uid + "/posts/" + keys[index])
         .remove()
     })
     //this.state.refArray[index].remove()
