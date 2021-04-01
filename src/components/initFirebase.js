@@ -5,15 +5,13 @@ import 'firebase/storage';  // If using Firebase storage
 
 var config = {
 
-  apiKey: "AIzaSyDktgQND4Vg_rSftOsNvK0LOe0sL9H4yrY",
-  authDomain: "unjobs-post.firebaseapp.com",
-  databaseURL: "https://unjobs-post.firebaseio.com",
-  projectId: "unjobs-post",
-  storageBucket: "unjobs-post.appspot.com",
-  messagingSenderId: "654532906512",
-  appId: "1:654532906512:web:8de7b7ea721243667fc495",
-  measurementId: "G-YXE9PDKKNS"
-	
+    apiKey: "AIzaSyCQ12wZofISeWA_YQ6_maxipAWLyBE4dqc",
+    authDomain: "unjobs-community.firebaseapp.com",
+    databaseURL: "https://unjobs-community.firebaseio.com",
+    projectId: "unjobs-community",
+    storageBucket: "unjobs-community.appspot.com",
+    messagingSenderId: "954677983380",
+    appId: "1:954677983380:web:22426725296c24b9851c81"
 	
 };
 if (!firebase.apps.length) {
