@@ -171,10 +171,12 @@ export default class Newpost1 extends Component {
       $('input[type="radio"]').prop("checked", false)
     })
     if (name_value === "" || phone_value === "" || title_value === "" || desc_value === "") {
+      console.log('value error');
       $(".continuebutton").attr("disabled", true)
     } else if ($(".category2").val() !== "Select a Category" && $("input[type=radio]:checked").length > 0 && phone_value.match(phoneregex) && desc_value.length >= 30) {
       if ($(".category2").val() === "Sale" || ($(".category2").val() === "Housing" && $("input[name='action']:checked").parent().text() !== "Roommates")) {
         if (price_value === "") {
+          console.log('price error 1');
           $(".continuebutton").attr("disabled", true)
         } else if (price_value.match(/^\d+$/)) {
           $(".continuebutton").attr("disabled", false)
@@ -183,6 +185,7 @@ export default class Newpost1 extends Component {
         $(".continuebutton").attr("disabled", false)
       }
     } else {
+      console.log('other error');
       $(".continuebutton").attr("disabled", true)
     }
   }
