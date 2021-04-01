@@ -166,14 +166,14 @@ export default class Newpost1 extends Component {
     var title_value = $.trim($("#title").val())
     var price_value = $.trim($(".price").val())
     var desc_value = $.trim($("#desc").val())
-    var phoneregex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im
+    // var phoneregex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im
     $(".category2").on("change", function () {
       $('input[type="radio"]').prop("checked", false)
     })
     if (name_value === "" || phone_value === "" || title_value === "" || desc_value === "") {
       console.log('value error');
       $(".continuebutton").attr("disabled", true)
-    } else if ($(".category2").val() !== "Select a Category" && $("input[type=radio]:checked").length > 0 && phone_value.match(phoneregex) && desc_value.length >= 30) {
+    } else if ($(".category2").val() !== "Select a Category" && $("input[type=radio]:checked").length > 0 && desc_value.length >= 30) {
       if ($(".category2").val() === "Sale" || ($(".category2").val() === "Housing" && $("input[name='action']:checked").parent().text() !== "Roommates")) {
         if (price_value === "") {
           console.log('price error 1');
@@ -311,7 +311,7 @@ export default class Newpost1 extends Component {
                     <label className="required">
                       Price <span className="red">*</span>
                     </label>
-                    <div id="dollasign">$</div> <input onChange={this.checkValidity} className="price" type="text" name="price"></input>
+                    <div id="dollasign"></div> <input onChange={this.checkValidity} className="price" type="text" name="price"></input>
                   </section>
                   <section>
                     <label className="required">
@@ -325,11 +325,11 @@ export default class Newpost1 extends Component {
                     <label className="required">
                       Name <span className="red">*</span>
                     </label>
-                    <input onChange={this.checkValidity} className="name" type="text" placeholder="John Doe" required></input> <br />
+                    <input onChange={this.checkValidity} className="name" type="text" required></input> <br />
                     <label className="required">
                       Phone Number <span className="red">*</span>
                     </label>
-                    <input onChange={this.checkValidity} className="phonenum" title="Enter a 10 digit number" type="text" placeholder="1234567890" required></input> <br />
+                    <input className="phonenum" title="Enter your phone number" type="text" required></input> <br />
                     <label>Note (optional)</label>
                     <input className="notes"></input> <br />
                   </section>
